@@ -1,0 +1,207 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h1 a{
+    color: brown;
+    text-decoration: none;
+}
+
+button {
+    font-size: 1em;
+    padding: 8px 16px;
+    background-color: #bfa07a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: brown;
+}
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+    color: brown;
+
+}
+
+nav a, .deco-button {
+    color: brown;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.logged-as{
+    text-align: center;
+    color: grey;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+nav a:hover, .deco-button:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+    width: 500px;
+    border: 3px solid brown;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid brown;
+}
+
+li a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #ecd9c6;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+        margin-top: 2px;
+}
+
+form label {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+    color: #6b4f36;
+    font-weight: bold;
+}
+
+form input {
+    font-size: 1em;
+    padding: 6px 8px;
+    border: 1px solid #bfa07a;
+    border-radius: 3px;
+    background: #fff8f0;
+    max-width: 500px;
+}
+
+form button, form input[type="submit"] {
+    font-size: 1em;
+    padding: 8px 16px;
+    background-color: #bfa07a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+form button:hover, form input[type="submit"]:hover {
+    background-color: brown;
+}
+
+.list-infos p {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #6b4f36;
+    background: #fff8f0;
+    padding: 8px 12px;
+    border: 1px solid #bfa07a;
+    border-radius: 3px;
+    max-width: 500px;
+}
+
+.list-infos label {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+    color: #6b4f36;
+    font-weight: bold;
+}
+
+.password-value {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.password-value + button {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.9em;
+    margin-top: 2px;
+    padding: 6px 12px;
+    background-color: #bfa07a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    margin-left: 8px;
+}
+
+.password-value + button:hover {
+    background-color: brown;
+}
+
+label{
+    display: block;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+
+#copy-password-btn:hover {
+    background-color: brown;
+}
+
+#copy-password-btn{
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+#link{
+    color: brown;
+    text-decoration: none;
+    font-weight: bold;
+}

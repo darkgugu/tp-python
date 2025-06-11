@@ -1,0 +1,19 @@
+{% extends 'password_vault/base.html' %}
+
+{% block content %}
+<h2>Lien de partage généré</h2>
+<p>Voici le lien temporaire (valable jusqu'au {{ expires_at }}):</p>
+<p><a id="link" href="{{ share_url }}">{{ share_url }}</a></p>
+<button id="copy-link-btn" style="display: inline-block;">Copier</button>
+
+<script>
+document.getElementById('copy-link-btn').addEventListener('click', function() {
+    const passwordText = document.getElementById('link').innerText;
+    navigator.clipboard.writeText(passwordText).then(function() {
+        alert('Lien copié !');
+    }, function(err) {
+        alert('Erreur lors de la copie : ' + err);
+    });
+});
+</script>
+{% endblock %}

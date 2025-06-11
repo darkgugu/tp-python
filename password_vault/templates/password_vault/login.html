@@ -1,0 +1,12 @@
+{% extends 'password_vault/base.html' %}
+
+{% block content %}
+<h2>Connexion</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Se connecter</button>
+</form>
+<p>Pas encore de compte ? <a href="{% url 'password_vault:signup' %}">Créer un compte</a></p>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'password_vault/style.css' %}">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Vault</title>
+</head>
+<body>
+    <h1><a href="{% url 'password_vault:password_list' %}">Password Vault</a></h1>
+<nav>
+    {% if user.is_authenticated %}
+        <a href="{% url 'password_vault:password_list' %}">Liste</a> |
+        <a href="{% url 'password_vault:password_add' %}">Ajouter</a> |
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button class="deco-button" type="submit">
+                Déconnexion
+            </button>
+        </form>
+    {% endif %}
+</nav>
+<div class="logged-as">
+    {% if user.is_authenticated %}
+        Connecté en tant que {{ user.username }}
+    {% endif %}
+</div>
+    
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
